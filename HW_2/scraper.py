@@ -14,8 +14,9 @@ qty = []
 content = []
 output = {}
 
-baseurl = 'https://books.toscrape.com/'
-url = 'https://books.toscrape.com/'
+baseurl = 'https://books.toscrape.com/catalogue/'
+url = baseurl + 'page-1.html'
+counter = 1
 
 while True:
 
@@ -32,7 +33,7 @@ while True:
     url_joined = []
 
     for link in url_2:
-        url_joined.append(urllib.parse.urljoin(url, link))
+        url_joined.append(urllib.parse.urljoin(baseurl, link))
 
     for i in url_joined:
         response = requests.get(i)
@@ -89,6 +90,8 @@ while True:
         break
 
     url = baseurl + next_page_link['href']
+    print(f'Страница каталога {counter} обработана')
+    counter+=1
 
 
 data = []
