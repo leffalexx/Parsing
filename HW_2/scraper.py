@@ -16,7 +16,7 @@ output = {}
 
 baseurl = 'https://books.toscrape.com/catalogue/'
 url = baseurl + 'page-1.html'
-counter = 1
+counter = 2
 
 while True:
 
