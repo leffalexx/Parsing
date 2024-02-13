@@ -10,4 +10,4 @@ class UnsplashItem(scrapy.Item):
     author = scrapy.Field()
     category = scrapy.Field()
     img_urls = scrapy.Field()
-    images  =scrapy.Field()
+    images = scrapy.Field()

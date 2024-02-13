@@ -6,14 +6,13 @@ from ..items import UnsplashItem
 from itemloaders.processors import MapCompose
 
 
-
 class UnsplashImgSpider(CrawlSpider):
     name = "unsplash_img"
     allowed_domains = ["www.unsplash.com"]
-    start_urls = ["https://unsplash.com/"]
+    start_urls = ["https://unsplash.com/backgrounds"]
 
     rules = (Rule(LinkExtractor(
-        restrict_xpaths="//div[@class='MorZF']"), callback="parse_item", follow=True),)
+        restrict_xpaths="//div[@class='zmDAx']"), callback="parse_item", follow=True),)
 
     def parse_item(self, response):
         loader = ItemLoader(item=UnsplashItem(), response=response)
