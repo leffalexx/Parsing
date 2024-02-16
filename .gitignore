@@ -3,3 +3,4 @@ test.py
 venv
 *.png
 *.jpg
+*pdf
